@@ -5,6 +5,7 @@
  */
 package javawebserviceserver.ws;
 
+import javax.jws.WebMethod;
 import javax.jws.WebService;
 
 /**
@@ -14,7 +15,13 @@ import javax.jws.WebService;
 @WebService
 public class SimpleService {
     
+    @WebMethod(exclude = true)
     public String getGreetings(final String name) {
         return "Bienvenido a mi servicio " + name;
+    }
+    
+    @WebMethod
+    public String showGreetings() {
+        return "Bienvenido!";
     }
 }
