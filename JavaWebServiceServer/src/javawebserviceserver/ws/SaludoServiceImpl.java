@@ -5,23 +5,19 @@
  */
 package javawebserviceserver.ws;
 
-import javax.jws.WebMethod;
 import javax.jws.WebService;
+
 
 /**
  *
  * @author Federico Coraglio
  */
-@WebService
-public class SimpleService {
-    
-    @WebMethod(exclude = true)
-    public String getGreetings(final String name) {
-        return "Bienvenido a mi servicio " + name;
+@WebService(endpointInterface = "javawebserviceserver.ws.SaludoService", serviceName = "SaludoServiceImpl")
+public class SaludoServiceImpl implements SaludoService {
+
+    @Override
+    public void mostrarSaludo() {
+        System.out.println("mostrar el saludo!");
     }
     
-    @WebMethod()
-    public String showGreetings() {
-        return "Bienvenido!";
-    }
 }
