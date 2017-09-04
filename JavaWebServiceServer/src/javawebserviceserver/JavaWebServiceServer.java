@@ -9,6 +9,7 @@ import javawebserviceserver.ws.SaludoService;
 import javawebserviceserver.ws.SaludoServiceImpl;
 import javawebserviceserver.ws.SecondService;
 import javawebserviceserver.ws.SimpleService;
+import javawebserviceserver.ws.UserService;
 import javax.xml.ws.Endpoint;
 
 /**
@@ -23,9 +24,10 @@ public class JavaWebServiceServer {
     public static void main(String[] args) {
         SaludoService service = new SaludoServiceImpl();
         System.out.println("Iniciando el servicio llamado simple service...");
-        Endpoint.publish("http://localhost:8001/ws/simpleService", new SimpleService());
-        Endpoint.publish("http://localhost:8001/ws/secondService", new SecondService());
-        Endpoint.publish("http://localhost:8001/ws/saludoService", service);
+        //Endpoint.publish("http://localhost:8001/ws/simpleService", new SimpleService());
+        //Endpoint.publish("http://localhost:8001/ws/secondService", new SecondService());
+        //Endpoint.publish("http://localhost:8001/ws/saludoService", service);
+        Endpoint.publish("http://localhost:8001/ws/userService", new UserService());
         System.out.println("El servicio quedo iniciado correctamente");
     }
     
