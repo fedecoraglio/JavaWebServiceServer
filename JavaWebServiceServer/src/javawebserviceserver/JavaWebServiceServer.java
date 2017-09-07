@@ -5,6 +5,7 @@
  */
 package javawebserviceserver;
 
+import javawebserviceserver.ws.MiService;
 import javawebserviceserver.ws.SaludoService;
 import javawebserviceserver.ws.SaludoServiceImpl;
 import javawebserviceserver.ws.SecondService;
@@ -28,6 +29,7 @@ public class JavaWebServiceServer {
         //Endpoint.publish("http://localhost:8001/ws/secondService", new SecondService());
         //Endpoint.publish("http://localhost:8001/ws/saludoService", service);
         Endpoint.publish("http://localhost:8001/ws/userService", new UserService());
+        Endpoint.publish("http://localhost:8001/ws/miService", new MiService());
         System.out.println("El servicio quedo iniciado correctamente");
     }
     
