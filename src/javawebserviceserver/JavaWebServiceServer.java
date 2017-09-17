@@ -25,9 +25,9 @@ public class JavaWebServiceServer {
     public static void main(String[] args) {
         SaludoService service = new SaludoServiceImpl();
         System.out.println("Iniciando el servicio llamado simple service...");
-        //Endpoint.publish("http://localhost:8001/ws/simpleService", new SimpleService());
-        //Endpoint.publish("http://localhost:8001/ws/secondService", new SecondService());
-        //Endpoint.publish("http://localhost:8001/ws/saludoService", service);
+        Endpoint.publish("http://localhost:8001/ws/simpleService", new SimpleService());
+        Endpoint.publish("http://localhost:8001/ws/secondService", new SecondService());
+        Endpoint.publish("http://localhost:8001/ws/saludoService", service);
         Endpoint.publish("http://localhost:8001/ws/userService", new UserService());
         Endpoint.publish("http://localhost:8001/ws/miService", new MiService());
         System.out.println("El servicio quedo iniciado correctamente");

@@ -23,3 +23,7 @@ hs_err_pid*
 /JavaWebServiceServer/nbproject/private/
 /JavaWebServiceServer/build/
 /JavaWebServiceServer/dist/
+nbproject/
+build/
+build.xml
+dist/
